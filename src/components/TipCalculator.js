@@ -10,24 +10,24 @@ function TipCalculator () {
         <div className="main">
             <form>
                 <div className="input-item">
-                    <label for="bill">Bill: {bill}</label>
+                    <label for="bill">Bill</label>
                     <br />
                     <input
                         id="bill"
                         name="bill"
-                        type="number"
+                        type="decimal"
                         min="0"
                         value={bill}
-                        onChange={(e) => setBill(e.target.value )}
+                        onChange={(e) => setBill(e.target.value)}
                     />
                 </div>
                 <div className="input-item">
-                    <label for="tip">Tip %: {tip}</label>
+                    <label for="tip">Tip %</label>
                     <br />
                     <input
                         id="tip"
                         name="tip"
-                        type="number"
+                        type="decimal"
                         min="0"
                         max="100"
                         value={tip}
@@ -35,12 +35,12 @@ function TipCalculator () {
                     />
                 </div>
                 <div className="input-item">
-                    <label for="split">Split: {split}</label>
+                    <label for="split">Split</label>
                     <br />
                     <input
                         id="split"
                         name="split"
-                        type="number"
+                        type="decimal"
                         min="1"
                         max="100"
                         value={split}
@@ -49,9 +49,9 @@ function TipCalculator () {
                 </div>
             </form>
             <div className="results">
-                <h2>Tip Amount: { tipAmount }</h2>
-                <h2>Total: { bill !== '' ? parseInt(bill) + parseInt(tipAmount) : 0}</h2>
-                <h2>Price per person: { split !== '' ? parseInt((parseInt(bill) + parseInt(tipAmount)) / split).toFixed(2) : 0 } </h2>
+                <h2>Tip Amount: { tipAmount.toFixed(2) }</h2>
+                <h2>Total: { bill !== '' ? (parseFloat(bill) + parseFloat(tipAmount)).toFixed(2) : 0}</h2>
+                <h2>Price per person: { split !== '' ? parseFloat((parseFloat(bill) + parseFloat(tipAmount)) / split).toFixed(2) : 0 } </h2>
             </div>
         </div>
     );
