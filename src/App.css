@@ -1,38 +1,70 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(90deg, white 25%, #61dafb 25%);
 }
 
-.App-link {
-  color: #61dafb;
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: left !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+    text-align: left;
+    padding: 4rem;
+    background: #222222;
+    border-radius: 2rem;
+    color: white;
+    margin-left: 10%;
+    margin-right: 20%;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+
+}
+
+form input {
+    margin-top: 1rem;
+    width: 300px;
+    height: 40px;
+    border-radius: 0.5rem;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    outline: none;
+}
+
+form .input-item {
+    margin-top: 3rem;
+}
+
+form .input-item:first-child {
+    margin-top: 0rem;
 }
